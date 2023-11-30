@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = System.Random;
@@ -55,6 +56,13 @@ public class GridBehavior : MonoBehaviour
             cb.left = GetCellAt(cb.row, cb.column - 1);
             cb.right = GetCellAt(cb.row, cb.column + 1);
         }
+
+        var starCell = cells[0];
+        var startcb = starCell.GetComponent<CellBehavior>();
+        startcb.leftWall.SetActive(false);
+        var lastCell = cells.Last();
+        var lastcb = lastCell.GetComponent<CellBehavior>();
+        lastcb.rightWall.SetActive(false);
     }
 
     GameObject RandomCell()
