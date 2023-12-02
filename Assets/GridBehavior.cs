@@ -12,6 +12,7 @@ public class GridBehavior : MonoBehaviour
     public int rows;
     public int columns;
     public List<GameObject> cells = new List<GameObject>();
+    public float scale = 10.0f;
     void Start()
     {
         PrepareGrid();
@@ -30,7 +31,7 @@ public class GridBehavior : MonoBehaviour
         {
             for (int column = 0; column < columns; column++)
             {
-                var newCell = Instantiate(cellPrefab, new Vector3(1.2f * row, 0, 1.2f * column), Quaternion.identity);
+                var newCell = Instantiate(cellPrefab, transform.position + new Vector3(1.2f * scale * row, 0, 1.2f * scale * column), Quaternion.identity);
                 if (newCell == null) continue;
                 var cb = newCell.GetComponent<CellBehavior>();
                 cb.row = row;
@@ -40,7 +41,7 @@ public class GridBehavior : MonoBehaviour
         }
     }
 
-    GameObject GetCellAt(int row, int column)
+    public GameObject GetCellAt(int row, int column)
     {
         if (row < 0 || row >= rows || column < 0 || column >= columns) return null;
         return cells[columns * row + column];
@@ -65,7 +66,7 @@ public class GridBehavior : MonoBehaviour
         lastcb.rightWall.SetActive(false);
     }
 
-    GameObject RandomCell()
+    public GameObject RandomCell()
     {
         var rn = new Random();
         return GetCellAt(rn.Next(0, rows), rn.Next(0, columns));

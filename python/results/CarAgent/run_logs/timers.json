@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1701498924",
+        "python_version": "3.9.18 (main, Aug 24 2023, 21:19:58) \n[Clang 14.0.3 (clang-1403.0.22.14.1)]",
+        "command_line_arguments": "/opt/homebrew/bin/mlagents-learn CarAgent.yaml --run-id=CarAgent",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.10.1",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1701498943"
+    },
+    "total": 18.113780292,
+    "count": 1,
+    "self": 0.015664624999999432,
+    "children": {
+        "run_training.setup": {
+            "total": 0.014787500000000064,
+            "count": 1,
+            "self": 0.014787500000000064
+        },
+        "TrainerController.start_learning": {
+            "total": 18.083328167,
+            "count": 1,
+            "self": 0.001487791999998933,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 18.081779375,
+                    "count": 1,
+                    "self": 18.081779375
+                },
+                "trainer_threads": {
+                    "total": 1.7499999991343884e-06,
+                    "count": 1,
+                    "self": 1.7499999991343884e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 5.925000000317482e-05,
+                    "count": 1,
+                    "self": 5.925000000317482e-05
+                }
+            }
+        }
+    }
+}

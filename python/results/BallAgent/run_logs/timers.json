@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1701496784",
+        "python_version": "3.9.18 (main, Aug 24 2023, 21:19:58) \n[Clang 14.0.3 (clang-1403.0.22.14.1)]",
+        "command_line_arguments": "/opt/homebrew/bin/mlagents-learn BallAgent.yaml --run-id=BallAgent --force",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.10.1",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1701496802"
+    },
+    "total": 18.389900542,
+    "count": 1,
+    "self": 0.019186708999999524,
+    "children": {
+        "run_training.setup": {
+            "total": 0.014343374999999936,
+            "count": 1,
+            "self": 0.014343374999999936
+        },
+        "TrainerController.start_learning": {
+            "total": 18.356370458,
+            "count": 1,
+            "self": 0.0007712910000030604,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 18.355578958,
+                    "count": 1,
+                    "self": 18.355578958
+                },
+                "trainer_threads": {
+                    "total": 1.666999999372365e-06,
+                    "count": 1,
+                    "self": 1.666999999372365e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 1.854199999939965e-05,
+                    "count": 1,
+                    "self": 1.854199999939965e-05
+                }
+            }
+        }
+    }
+}
